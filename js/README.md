@@ -1,0 +1,56 @@
+# Perso Live SDK release note (js)
+
+## Changes(v1.0.1)
+### New feature
+Terminate session  
+&emsp;Added Session-stopSession  
+
+Set TTS type  
+&emsp;Added PersoLiveSDK-getTTSs  
+
+Intro message  
+&emsp;Added Session-intro  
+
+### Modified
+PersoLiveSDK-getAllSettings  
+&emsp;Added 'ttsTypes' in return value  
+
+PersoLiveSDK-createSessionId  
+&emsp;Added 'ttsType' parameter  
+
+## Changes(v1.0.2)
+### New feature
+Set chatbot's background image  
+&emsp;Added PersoLiveSDK-getBackgroundImages
+
+Make the chatbot speak using audio (Experimental)  
+&emsp;Added Session-processSTF
+
+Get 'MediaStream'  
+&emsp;Added Session-getLocalStream (User's audio stream)  
+&emsp;Added Session-getRemoteStream (Chatbot's media(video+audio) stream)
+
+Get 'Session ID'  
+&emsp;Added Session-getSessionId
+
+### Modified
+PersoLiveSDK-getAllSettings  
+&emsp;Added 'backgroundImages' in return value  
+
+PersoLiveSDK-createSession  
+&emsp;Removed 'continuality' parameter  
+
+PersoLiveSDK-createSessionId  
+&emsp;Added 'backgroundImage' parameter  
+
+Session-processSTF  
+&emsp; Changed function name to 'processTTSTF'  
+
+Session-recordStart  
+&emsp; Changed function name to 'startVoiceChat'  
+
+Session-recordEnd  
+&emsp; Changed function name to 'stopVoiceChat'  
+
+### Fixed
+Issue where an error related to 'ping' occurs after the session has ended
