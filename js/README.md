@@ -1,22 +1,14 @@
 # Perso Live SDK release note (js)
 
-## Changes(v1.0.1)
+## Changes(v1.0.3)
 ### New feature
-Terminate session  
-&emsp;Added Session-stopSession  
-
-Set TTS type  
-&emsp;Added PersoLiveSDK-getTTSs  
-
-Intro message  
-&emsp;Added Session-intro  
+Set chatbot position  
 
 ### Modified
-PersoLiveSDK-getAllSettings  
-&emsp;Added 'ttsTypes' in return value  
-
 PersoLiveSDK-createSessionId  
-&emsp;Added 'ttsType' parameter  
+&emsp;Added 'chatbotLeft' parameter  
+&emsp;Added 'chatbotTop' parameter  
+&emsp;Added 'chatbotHeight' parameter  
 
 ## Changes(v1.0.2)
 ### New feature
@@ -53,4 +45,22 @@ Session-recordEnd
 &emsp; Changed function name to 'stopVoiceChat'  
 
 ### Fixed
-Issue where an error related to 'ping' occurs after the session has ended
+Issue where an error related to 'ping' occurs after the session has ended  
+
+## Changes(v1.0.1)
+### New feature
+Terminate session  
+&emsp;Added Session-stopSession  
+
+Set TTS type  
+&emsp;Added PersoLiveSDK-getTTSs  
+
+Intro message  
+&emsp;Added Session-intro  
+
+### Modified
+PersoLiveSDK-getAllSettings  
+&emsp;Added 'ttsTypes' in return value  
+
+PersoLiveSDK-createSessionId  
+&emsp;Added 'ttsType' parameter  
