@@ -1,5 +1,9 @@
 # Perso Live SDK release note (js)
 
+## Changes(v1.0.4)
+### Modified
+Added new error types
+
 ## Changes(v1.0.3)
 ### New feature
 Set chatbot position  
