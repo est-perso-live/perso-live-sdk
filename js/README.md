@@ -1,5 +1,17 @@
 # Perso Live SDK release note (js)
 
+## Changes(v1.0.5)
+### Modified
+Session-getIceServers  
+&emsp;Removed the 'apiKey' parameter  
+
+Session-processSTF  
+&emsp;Added a return value  
+
+### New feature
+Added 'StfStartEvent'  
+Added a method to subscribe to 'StfStartEvent'  
+
 ## Changes(v1.0.4)
 ### Modified
 Added new error types
