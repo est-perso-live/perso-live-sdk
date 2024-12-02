@@ -1,5 +1,13 @@
 # Perso Live SDK release note (js)
 
+## Changes(v1.0.6)
+### Modified
+PersoLiveSDK-createSession  
+&emsp;Added 'enableVoiceChat' parameter  
+
+### New feature
+Added a feature to turn on/off the voice chat (If voice chat is turned off, microphone permission will not be requested)  
+
 ## Changes(v1.0.5)
 ### Modified
 Session-getIceServers  
@@ -14,7 +22,7 @@ Added a method to subscribe to 'StfStartEvent'
 
 ## Changes(v1.0.4)
 ### Modified
-Added new error types
+Added new error types  
 
 ## Changes(v1.0.3)
 ### New feature
@@ -29,17 +37,17 @@ PersoLiveSDK-createSessionId
 ## Changes(v1.0.2)
 ### New feature
 Set chatbot's background image  
-&emsp;Added PersoLiveSDK-getBackgroundImages
+&emsp;Added PersoLiveSDK-getBackgroundImages  
 
 Make the chatbot speak using audio (Experimental)  
-&emsp;Added Session-processSTF
+&emsp;Added Session-processSTF  
 
 Get 'MediaStream'  
 &emsp;Added Session-getLocalStream (User's audio stream)  
-&emsp;Added Session-getRemoteStream (Chatbot's media(video+audio) stream)
+&emsp;Added Session-getRemoteStream (Chatbot's media(video+audio) stream)  
 
 Get 'Session ID'  
-&emsp;Added Session-getSessionId
+&emsp;Added Session-getSessionId  
 
 ### Modified
 PersoLiveSDK-getAllSettings  
