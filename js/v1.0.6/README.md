@@ -150,18 +150,18 @@ async function getIceServers(apiServer, sessionId)
 ```
 apiServer : (Required) string / API Server url  
 sessionId : (Required) string / Session ID  
-return : Array<RTCIceServer>
+return : Array\<RTCIceServer\>
 
 ### Create session
 ```javascript
 async function createSession(apiServer, iceServers, sessionId, width, height, enableVoiceChat)
 ```
 apiServer : (Required) string / API Server url  
-iceServers : (Required) Array<RTCIceServer> / ICE Servers for WebRTC Connection  
+iceServers : (Required) Array\<RTCIceServer\> / ICE Servers for WebRTC Connection  
 sessionId : (Required) string / Session ID  
 width : (Required) number / Chatbot video width  
 height : (Required) number / Chatbot video height  
-enableVoiceChat : (Required) boolean / Whether 'Voice chat' is used
+enableVoiceChat : (Required) boolean / Whether 'Voice chat' is used  
 return : Session
 
 ## Session
@@ -177,27 +177,21 @@ function setSrc(videoElement)
 ```
 videoElement : (Required) Video (\<video\>)
 
-### Subscribe to state changes from the session  
+### Callback for when the session is closed.  
 ```javascript
-function subscribeSessionStatus(callback)
+function onClose(callback)
 ```
-callback : (Required) ((SessionStatus) => Void) / Callback for session status updates
-```javascript
-SessionStatus
-{
-  live: boolean, // true (session started), false (session not started)
-  code: number,  // 200, 408
-  reason: string // code 200 -> OK, code 408 -> Request Timeout
-}  
-```
-return : (() => Void) / unsubscribeSessionStatus, function to unsubscribe
+callback : (Required) ((boolean) => void) / Callback for when the session is closed  
+&emsp;boolean - Whether the user closed the session themselves  
+&emsp;If false, the quota has been exceeded or a network error has occurred.  
+return : (() => void) / removeOnClose, function to remove callback
 
 ### Subscribe to conversation log changes from the session
 Receive the entire conversation log whenever it's updated
 ```javascript
 function subscribeChatLog(callback)
 ```
-callback : (Required) ((Array\<Chat\>) => Void) / Callback for conversation log
+callback : (Required) ((Array\<Chat\>) => void) / Callback for conversation log
 ```javascript
 Chat
 {
@@ -206,25 +200,25 @@ Chat
   timestamp: Date // conversation timestamp
 }
 ```
-return : (() => Void) / unsubscribeChatLog, function to unsubscribe
+return : (() => void) / unsubscribeChatLog, function to unsubscribe
 
 ### Subscribe to 'Chat state' changes from the session
 Receive 'Chat state' changes during conversation  
 ```javascript
 function subscribeMicStatus(callback)
 ```
-callback : (Required) ((number) => Void) / Callback for 'Chat state'  
+callback : (Required) ((number) => void) / Callback for 'Chat state'  
 &emsp;number - Chat state / 0 (available), 1 (recording), 2 (analyzing), 3 (chatbot speaking)  
 &emsp;Need to control 'send' and 'recordStart' to be called only when 'Chat state' is 0  
-return : (() => Void) / unsubscribeChatState, function to unsubscribe
+return : (() => void) / unsubscribeChatState, function to unsubscribe
 
-### Subscribe to 'Chat state' changes from the session
+### Subscribe to 'StfStartEvent' from the session
 Receive the 'StfStartEvent'
 ```javascript
 function subscribeStfStartEvent(callback)
 ```
-callback : (Required) ((StfStartEvent) => Void) / Callback for 'StfStartEvent'  
-return : (() => Void) / unsubscribeStfStartEvent, function to unsubscribe
+callback : (Required) ((StfStartEvent) => void) / Callback for 'StfStartEvent'  
+return : (() => void) / unsubscribeStfStartEvent, function to unsubscribe
 ```javascript
 StfStartEvent
 {
@@ -300,5 +294,5 @@ return : MediaStream
 ```javascript
 function stopSession()
 ```
-terminate session, chatbot conversation ends immediately.
-If successfully terminated, `live:false and code:200` will be sent to subscribeSessionStatus  
+close session, chatbot conversation ends immediately.
+If successfully closed, 'true' will be sent to onClose  

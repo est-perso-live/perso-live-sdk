@@ -5,6 +5,9 @@
 PersoLiveSDK-createSession  
 &emsp;Added 'enableVoiceChat' parameter  
 
+Session-subscribeSessionStatus  
+&emsp;Replaced by 'onClose'
+
 ### New feature
 Added a feature to turn on/off the voice chat (If voice chat is turned off, microphone permission will not be requested)  
 
