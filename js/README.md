@@ -1,5 +1,13 @@
 # Perso Live SDK release note (js)
 
+## Changes(v1.0.7)
+### New feature
+Get session information  
+&emsp;Added PersoLiveSDK-getSessionInfo  
+
+### Modified
+Removed PersoLiveSDK-getIceServers
+
 ## Changes(v1.0.6)
 ### Modified
 PersoLiveSDK-createSession  
