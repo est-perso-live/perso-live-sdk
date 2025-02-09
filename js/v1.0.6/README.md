@@ -61,9 +61,9 @@ return : JSON
 ```JSON
 [
   {
-	"name": string,
-	"service": string,
-	"speaker": string
+    "name": string,
+    "service": string,
+    "speaker": string
   }
 ]
 ```
@@ -78,11 +78,11 @@ return : JSON
 ```JSON
 [
   {
-	"name": string,
-	"description": string,
-	"prompt_id": string,
+    "name": string,
+    "description": string,
+    "prompt_id": string,
     "system_prompt": string,
-	"require_document": boolean,
+    "require_document": boolean,
     "intro_message": string
   }
 ]
