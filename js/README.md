@@ -1,5 +1,16 @@
 # Perso Live SDK release note (js)
 
+## Changes(v1.0.8)
+### New feature
+Added a callback to obtain STT results when using the voice chat feature  
+&emsp;Added Session-setSttResultCallback
+
+### Modified
+Changed Session-processChat to not be an async function  
+Changed Session-processTTSTF to not be an async function  
+Renamed subscribeMicStatus to subscribeChatStatus  
+Changed default behavior of voice chat  
+
 ## Changes(v1.0.7)
 ### New feature
 Get session information  
