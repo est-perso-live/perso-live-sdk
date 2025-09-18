@@ -1,4 +1,4 @@
-# Perso Live SDK details (js)
+# Perso AI Live Chat SDK details (js)
 
 ## PersoLiveSDK
 ### Get LLM list

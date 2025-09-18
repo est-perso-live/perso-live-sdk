@@ -1,4 +1,4 @@
-# Perso Live SDK release note (js)
+# Perso AI Live Chat SDK release note (js)
 
 ## Changes(v1.0.8)
 ### New feature
